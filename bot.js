@@ -28,7 +28,7 @@ client.on('ready', () => {
 
 
 client.on('message', function(message) {
-	const myID = "504040074921377792";
+	const myID = "555361958036242448";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -93,7 +93,7 @@ client.on('voiceStateUpdate', (old, now) => {
   const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
   const size = channel.name.match(/\[\s(\d+)\s\]/);
   if (!size) return channel.setName(`#M8 Voice: ${currentSize}`);
-  if (currentSize !== size) channel.setName(`#M8 Voice:${currentSize}`);
+  if (currentSize !== size) channel.setName(`Inside The Zone:${currentSize}`);
 });
 
 client.on('voiceStateUpdate', (oldM, newM) => {
