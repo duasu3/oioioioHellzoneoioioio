@@ -92,8 +92,8 @@ client.on('voiceStateUpdate', (old, now) => {
   const channel = client.channels.get('574536067043033090');
   const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
   const size = channel.name.match(/\[\s(\d+)\s\]/);
-  if (!size) return channel.setName(`Inside The Zone: (${currentSize})`);
-  if (currentSize !== size) channel.setName(`Inside The Zone: (${currentSize})`);
+  if (!size) return channel.setName(`Active Now : (${currentSize})`);
+  if (currentSize !== size) channel.setName(`Active Now : (${currentSize})`);
 });
 
 client.on('voiceStateUpdate', (oldM, newM) => {
